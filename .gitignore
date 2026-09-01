@@ -1,0 +1,36 @@
+# Environments & Secrets
+.env
+backend/.env
+backend/venv/
+venv/
+ENV/
+
+# Python Cache & Artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+.pytest_cache/
+
+# Node / Frontend Dependencies & Builds
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+
+# Generated Uploads & Reports (Keep directory structure)
+uploads/images/*
+uploads/videos/*
+uploads/identity/*
+results/reports/*
+!uploads/images/.gitkeep
+!uploads/videos/.gitkeep
+!uploads/identity/.gitkeep
+!results/reports/.gitkeep
+
+# OS / IDE Junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

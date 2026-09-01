@@ -1,0 +1,25 @@
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker, DeclarativeBase
+from config import settings
+
+# Configure SQLite engine with thread safety for FastAPI async endpoints
+engine_kwargs = {}
+if settings.DATABASE_URL.startswith("sqlite"):
+    engine_kwargs["connect_args"] = {"check_same_thread": False}
+
+engine = create_engine(settings.DATABASE_URL, **engine_kwargs)
+
+# Create session factory
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
+# Declarative Base Class
+class Base(DeclarativeBase):
+    pass
+
+# FastAPI Dependency for Database Sessions
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
