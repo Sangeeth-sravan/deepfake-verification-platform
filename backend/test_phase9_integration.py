@@ -276,3 +276,7 @@ def run_phase9_smoke_test():
 
 if __name__ == "__main__":
     run_phase9_smoke_test()
+
+
+def test_phase9_smoke():
+    run_phase9_smoke_test()

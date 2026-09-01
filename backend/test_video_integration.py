@@ -75,3 +75,7 @@ def run_video_smoke_test():
 
 if __name__ == "__main__":
     run_video_smoke_test()
+
+
+def test_video_smoke():
+    run_video_smoke_test()

@@ -212,3 +212,7 @@ def run_identity_smoke_test():
 
 if __name__ == "__main__":
     run_identity_smoke_test()
+
+
+def test_identity_smoke():
+    run_identity_smoke_test()

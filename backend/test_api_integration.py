@@ -77,3 +77,7 @@ def run_api_smoke_test():
 
 if __name__ == "__main__":
     run_api_smoke_test()
+
+
+def test_api_smoke():
+    run_api_smoke_test()

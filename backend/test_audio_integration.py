@@ -74,3 +74,7 @@ def run_audio_smoke_test():
 
 if __name__ == "__main__":
     run_audio_smoke_test()
+
+
+def test_audio_smoke():
+    run_audio_smoke_test()

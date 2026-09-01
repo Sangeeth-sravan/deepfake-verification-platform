@@ -58,3 +58,7 @@ def run_image_tests():
 
 if __name__ == "__main__":
     run_image_tests()
+
+
+def test_image_service():
+    run_image_tests()
